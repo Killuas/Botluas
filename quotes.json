@@ -1,0 +1,10 @@
+[
+    {
+        "name":"sample1",
+        "quote":"this is a sample quote"
+    },
+    {
+        "name":"sample2",
+        "quote":"this is also a sample quote"
+    }
+]
