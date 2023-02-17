@@ -10,12 +10,12 @@ class Pictures(commands.Cog):
         print("Pictures cog loaded")
 
     #Command that produces the anti-bully ranger picture
-    @commands.command(name = 'nobully', help='Responds with the no bully picture')
+    @commands.command(name = 'nobully', help='Responds with the no bully picture.')
     async def nobully(self, ctx):
         await ctx.send(file=discord.File('./pictures/nobully.jpg'))
 
     #Command that produces the Momiji awoo picture
-    @commands.command(name = 'awoo', help='Responds with the Momiji awoo picture')
+    @commands.command(name = 'awoo', help='Responds with the Momiji awoo picture.')
     async def awoo(self, ctx):
         await ctx.send(file=discord.File('./pictures/awoo.jpg'))
 

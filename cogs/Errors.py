@@ -9,7 +9,7 @@ class Errors(commands.Cog):
         print("Errors cog loaded")
 
     #Errors that are raised to the user
-    @commands.event
+    @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         #Will inform the user that the command they entered is not a command if it is not defined
         if isinstance(error, commands.CommandNotFound):

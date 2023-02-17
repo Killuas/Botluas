@@ -13,7 +13,7 @@ class Quotes(commands.Cog):
         print("Quotes cog loaded")
 
     #Produces a quote that is stored in the json database
-    @commands.command(name='quote', help='Returns a random quote, optionally add a name after to specify someone')
+    @commands.command(name='quote', help='Returns a random quote or quote from a named person.')
     async def quote(self, ctx, name = None):
         guild = str(ctx.message.guild.id)
         quotes = json.load(open('./quotes/' + guild + '.json'))
@@ -34,7 +34,7 @@ class Quotes(commands.Cog):
         await ctx.send(f"\"{quote}\" -{name}")
 
     #Command to add a new quote to the bots json database
-    @commands.command(name='addquote', help='Adds a quote to the database, requires you to name a user first then input the quote')
+    @commands.command(name='addquote', help='Adds a quote to the list. Name goes before quote.')
     @commands.has_role('Bot Admin')
     async def addquote(self, ctx, name, *, quote):
         newquote = {"name":name, "quote":quote}
@@ -63,7 +63,7 @@ class Quotes(commands.Cog):
             await ctx.send("Unknown error, contact owner")
 
     #command to remove quote from json database
-    @commands.command(name='delquote', help='Deletes the quote numbered what the user enters. Changes quote numbers.')
+    @commands.command(name='delquote', help='Deletes a quote based on the number given.')
     @commands.has_role('Bot Admin')
     async def delquote(self, ctx, num):
         if int(num) < 1:
