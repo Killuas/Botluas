@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Person1",
+        "quote": "Qoute is here"
+    },
+    {
+        "name": "Person2",
+        "quote": "Quote is here again"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "userid":"Discord User ID 1",
+        "file":"sample1.mp3"
+    },
+    {
+        "userid":"Discord User ID 2",
+        "file":"sample2.mp3"
+    }
+]
